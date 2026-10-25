@@ -1,0 +1,439 @@
+/* ==========================================================
+   Chou Farm Limited - styles shared by the inner pages
+   ========================================================== */
+
+/* ---------- Page banner ---------- */
+.page-hero {
+  background: var(--green-light);
+  border-bottom: 1px solid var(--border);
+  padding: 40px 0 36px;
+}
+.page-hero h1 { font-size: 1.9rem; margin-bottom: 0.3em; }
+.page-hero p { margin: 0; color: var(--muted); max-width: 640px; }
+
+.breadcrumb { font-size: 0.9rem; margin-bottom: 12px; color: var(--muted); }
+.breadcrumb a { color: var(--green); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+
+/* ---------- Text content ---------- */
+.prose { max-width: 760px; }
+.prose h2 { font-size: 1.5rem; margin-top: 1.6em; }
+.prose h3 { font-size: 1.2rem; margin-top: 1.4em; }
+.prose ul, .prose ol { padding-left: 1.3em; margin: 0 0 1em; }
+.prose li { margin-bottom: 0.4em; }
+
+/* ---------- Placeholder marker ----------
+   Shows clearly that real details have not been entered yet. */
+.placeholder-note {
+  padding: 12px 14px;
+  border-left: 4px solid var(--green);
+  background: var(--green-light);
+  border-radius: 0 8px 8px 0;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+/* ---------- Extra grid sizes ---------- */
+.grid-3 { grid-template-columns: 1fr; }
+@media (min-width: 600px) { .grid-3 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .grid-3 { grid-template-columns: repeat(3, 1fr); } }
+
+/* ---------- Team cards ---------- */
+.team-card { text-align: center; }
+.team-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: var(--green-light);
+  color: var(--green);
+}
+.team-photo svg { width: 40px; height: 40px; }
+.team-role { color: var(--muted); font-size: 0.95rem; }
+
+/* ---------- Timeline (milestones) ---------- */
+.timeline { list-style: none; margin: 0; padding: 0 0 0 20px; border-left: 3px solid var(--border); }
+.timeline li { position: relative; padding: 0 0 24px 20px; }
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -29px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--green);
+  border: 3px solid var(--white);
+  box-shadow: 0 0 0 1px var(--green);
+}
+.timeline-date { font-weight: 600; color: var(--green-dark); margin-bottom: 2px; }
+
+/* ---------- Choice cards (Production, Gallery) ---------- */
+.choice-card { text-align: center; padding: 36px 24px; }
+.choice-card .card-icon { width: 64px; height: 64px; margin-bottom: 16px; }
+.choice-card .card-icon svg { width: 32px; height: 32px; }
+.choice-card h2 { font-size: 1.3rem; }
+
+@media (min-width: 600px) {
+  .page-hero { padding: 56px 0 48px; }
+  .page-hero h1 { font-size: 2.4rem; }
+}
+/* ==========================================================
+   Forms, toolbars and badges (shared by Sales, Contact, Admin)
+   ========================================================== */
+
+.toolbar {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr;
+  margin-bottom: 24px;
+  padding: 16px;
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+@media (min-width: 768px) {
+  .toolbar { grid-template-columns: 2fr 1fr 1fr; align-items: end; }
+}
+
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label { font-weight: 600; font-size: 0.95rem; color: var(--green-dark); }
+
+.input {
+  width: 100%;
+  min-height: 44px;               /* touch-friendly */
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color var(--speed), box-shadow var(--speed);
+}
+.input:hover:not(:disabled) { border-color: var(--green); }
+.input:focus { outline: none; border-color: var(--green); box-shadow: 0 0 0 3px rgba(23, 101, 52, 0.25); }
+.input:disabled { background: var(--bg); color: var(--muted); cursor: not-allowed; }
+.input.invalid { border-color: var(--danger); }
+textarea.input { min-height: 140px; resize: vertical; }
+
+.field-error { color: var(--danger); font-size: 0.9rem; margin: 0; }
+.field-hint { color: var(--muted); font-size: 0.9rem; margin: 0; }
+
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+.badge-in      { background: var(--green-light); color: var(--green-dark); }
+.badge-limited { background: #FFF3D6; color: #7A4F00; }
+.badge-out     { background: #FDECEC; color: var(--danger); }
+/* ==========================================================
+   Crop and livestock cards, and saved rich text
+   ========================================================== */
+.item-card h3 { margin-bottom: 8px; font-size: 1.2rem; overflow-wrap: anywhere; }
+.item-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+.item-meta { margin: 0 0 6px; font-size: 0.95rem; }
+.item-meta strong { color: var(--green-dark); }
+.item-excerpt { color: var(--muted); }
+
+.item-more summary {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--green);
+  font-weight: 600;
+  cursor: pointer;
+}
+.item-more summary:hover { color: var(--green-dark); }
+.item-more[open] summary { margin-bottom: 8px; }
+
+.rich-text h2 { font-size: 1.4rem; margin-top: 1.2em; }
+.rich-text h3 { font-size: 1.2rem; margin-top: 1.1em; }
+.rich-text ul, .rich-text ol { padding-left: 1.3em; margin: 0 0 1em; }
+.rich-text li { margin-bottom: 0.3em; }
+.rich-text > :last-child { margin-bottom: 0; }
+/* ---------- Team photographs ---------- */
+.team-photo { overflow: hidden; }
+.team-photo img { width: 100%; height: 100%; object-fit: cover; }
+/* ---------- Farm map ---------- */
+.map-frame {
+  display: block;
+  width: 100%;
+  height: 300px;
+  margin-bottom: 12px;
+  border: 0;
+  border-radius: 10px;
+}
+/* ---------- Photographs on crop and livestock cards ---------- */
+.item-cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  background: var(--green-light);
+  object-fit: cover;
+}
+.item-photo-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+.item-photo-grid figure { margin: 0; }
+.item-photo-grid img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  object-fit: cover;
+}
+.item-photo-grid figcaption { margin-top: 4px; color: var(--muted); font-size: 0.85rem; }
+/* ==========================================================
+   Farm gallery and lightbox
+   ========================================================== */
+.gallery-card { grid-column: 1 / -1; }
+.gallery-card h3 { overflow-wrap: anywhere; }
+
+.gallery-thumbs {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 16px;
+}
+.thumb-button {
+  display: block;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: var(--green-light);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform var(--speed), box-shadow var(--speed);
+}
+.thumb-button:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.thumb-button:active { transform: scale(0.98); }
+.thumb-button img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.lightbox {
+  width: 100%;
+  max-width: 100vw;
+  height: 100%;
+  max-height: 100vh;
+  margin: 0;
+  padding: 16px;
+  border: 0;
+  background: rgba(10, 30, 15, 0.96);
+  color: #ffffff;
+}
+.lightbox[open] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.lightbox::backdrop { background: rgba(10, 30, 15, 0.96); }
+.lightbox-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 900px;
+}
+.lightbox-figure {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 900px;
+}
+.lightbox-img {
+  max-width: 100%;
+  max-height: 68vh;
+  border-radius: 8px;
+  object-fit: contain;
+}
+.lightbox-caption { margin-top: 10px; text-align: center; }
+.lightbox-controls { display: flex; gap: 12px; }
+
+@media (min-width: 600px) {
+  .gallery-thumbs { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1024px) {
+  .gallery-thumbs { grid-template-columns: repeat(4, 1fr); }
+}
+/* ---------- Single guide ---------- */
+.guide-cover {
+  display: block;
+  width: 100%;
+  max-height: 420px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  background: var(--green-light);
+  object-fit: cover;
+}
+.guide-count { margin: 0 0 16px; color: var(--muted); font-size: 0.9rem; }
+/* ---------- Learning materials and the PDF viewer ---------- */
+.item-card .record-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 12px; }
+.item-card .record-actions .btn { min-height: 44px; padding: 8px 16px; font-size: 0.95rem; }
+
+.pdf-wrap {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  min-height: 0;
+  overflow: auto;
+  border-radius: 8px;
+  background: #ffffff;
+}
+.pdf-wrap canvas { display: block; margin: 0 auto; }
+.pdf-wrap canvas[hidden] { display: none; }
+.pdf-message { margin: 0; padding: 24px; color: #26352A; text-align: center; }
+.pdf-message[hidden] { display: none; }
+.lightbox-controls { flex-wrap: wrap; justify-content: center; align-items: center; }
+/* ---------- Products ---------- */
+.price-line {
+  margin: 0 0 8px;
+  color: var(--green-dark);
+  font-family: var(--font-head);
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.product-main {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  background: var(--green-light);
+  object-fit: cover;
+}
+.product-thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-top: 8px; }
+.product-thumbs .thumb-button { border: 2px solid transparent; }
+.product-thumbs .thumb-button[aria-pressed="true"] { border-color: var(--green); }
+/* ---------- Contact and order request form ---------- */
+.form-stack > * + * { margin-top: 16px; }
+
+.form-message {
+  padding: 12px 14px;
+  border-left: 4px solid;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+.form-message[hidden] { display: none; }
+.form-message.is-error { background: #FDECEC; color: #8E1B1B; border-color: var(--danger); }
+
+.plain-fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
+.plain-fieldset legend { padding: 0; margin-bottom: 8px; color: var(--green-dark); font-weight: 600; }
+
+.radio-group { display: flex; flex-wrap: wrap; gap: 12px; }
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--white);
+  cursor: pointer;
+  transition: background var(--speed), border-color var(--speed);
+}
+.radio-option:hover { border-color: var(--green); }
+.radio-option input { width: 20px; height: 20px; accent-color: var(--green); }
+.radio-option:has(input:checked) { border-color: var(--green); background: var(--green-light); }
+
+.order-line {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: 1fr;
+  margin-bottom: 12px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+}
+.order-line[hidden], .remove-line[hidden] { display: none; }
+@media (min-width: 600px) {
+  .order-line { grid-template-columns: 2fr 1fr auto; align-items: start; }
+  .order-line .remove-line { margin-top: 30px; }
+}
+
+.consent-row { display: flex; align-items: flex-start; gap: 10px; cursor: pointer; }
+.consent-row input { flex-shrink: 0; width: 22px; height: 22px; margin-top: 2px; accent-color: var(--green); }
+/* ==========================================================
+   Phase 8: contrast, search, footer logo, easier tapping
+   ========================================================== */
+
+/* Slightly darker "muted" text so it passes the AA contrast rule on light backgrounds */
+:root { --muted: #5B685F; }
+
+/* Header buttons sit side by side */
+.site-header .header-admin { display: flex; align-items: center; gap: 4px; }
+
+/* The skip link moves focus into the page without a visible box */
+main:focus { outline: none; }
+
+/* Anchors (such as #crop-gallery) are not hidden under the sticky header */
+[id] { scroll-margin-top: 80px; }
+
+/* Standalone links inside cards are easier to tap */
+.item-card > a:not(.btn),
+.card > a:not(.btn):not(.card-link) {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+/* Footer logo */
+.footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
+.footer-brand h2 { margin: 0; }
+.footer-brand .brand-logo { padding: 4px; border-radius: 8px; background: #ffffff; }
+.footer-brand .brand-mark { background: var(--green); }
+
+/* Site search window */
+.search-dialog {
+  width: calc(100% - 24px);
+  max-width: 640px;
+  max-height: calc(100vh - 24px);
+  margin: 12px auto;
+  padding: 16px;
+  overflow: auto;
+  border: 0;
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--text);
+  box-shadow: var(--shadow-md);
+}
+.search-dialog::backdrop { background: rgba(16, 73, 35, 0.5); }
+.search-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 12px; }
+.search-top h2 { margin: 0; font-size: 1.2rem; }
+.search-form { margin-bottom: 8px; }
+.search-group { margin-top: 16px; }
+.search-group h3 { margin-bottom: 4px; font-size: 1rem; }
+.search-list { margin: 0; padding: 0; list-style: none; }
+.search-list a {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.search-list a:hover { background: var(--green-light); }
+/* ---------- Home page banner picture ---------- */
+.hero.has-image {
+  background:
+    linear-gradient(135deg, rgba(16, 73, 35, 0.82), rgba(23, 101, 52, 0.72)),
+    var(--hero-image) center / cover no-repeat;
+}

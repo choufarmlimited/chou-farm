@@ -1,0 +1,74 @@
+/* ==========================================================
+   Chou Farm Limited - responsive layout
+   Mobile first: style.css covers phones, this file adds
+   changes for wider screens.
+   ========================================================== */
+
+/* Stop any accidental sideways scrolling */
+html, body { overflow-x: hidden; }
+
+/* ---------- Very small phones (under 380 px) ---------- */
+@media (max-width: 379px) {
+  .brand-slogan { display: none; }
+  .hero h1 { font-size: 1.8rem; }
+  .btn { width: 100%; }
+  .hero-actions { flex-direction: column; }
+}
+
+/* ---------- Large phones and small tablets (600 px and up) ---------- */
+@media (min-width: 600px) {
+  .container, .hero-inner { padding-left: 24px; padding-right: 24px; }
+
+  .hero { padding: 96px 0 104px; }
+  .hero h1 { font-size: 2.7rem; }
+
+  .section { padding: 64px 0; }
+  .section-title { font-size: 1.9rem; }
+
+  .grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .header-admin .label { display: inline; }
+  .brand-name { font-size: 1.1rem; }
+  .brand-slogan { font-size: 0.8rem; }
+}
+
+/* ---------- Tablets (768 px and up) ---------- */
+@media (min-width: 768px) {
+  :root { --sidebar-w: 300px; }
+  .hero h1 { font-size: 3rem; }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .cookie-notice { left: 50%; right: auto; width: 640px; transform: translateX(-50%); }
+}
+
+/* ---------- Laptops and desktops (1024 px and up) ---------- */
+@media (min-width: 1024px) {
+  /* Public shortcuts appear in the header */
+  .header-nav { display: flex; }
+  .header-admin { margin-left: 8px; }
+
+  /* The sidebar pushes the page instead of covering it */
+  body { transition: padding-left var(--speed) ease; }
+  body.sidebar-open { padding-left: var(--sidebar-w); }
+  .overlay { display: none; }
+  .sidebar { box-shadow: none; }
+
+  .hero { padding: 120px 0 128px; }
+  .hero h1 { font-size: 3.4rem; }
+  .hero-text { font-size: 1.25rem; }
+
+  .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1.2fr; }
+}
+
+/* ---------- Wide desktops (1400 px and up) ---------- */
+@media (min-width: 1400px) {
+  .container, .hero-inner { max-width: 1240px; }
+}
+
+/* ---------- Printing ---------- */
+@media print {
+  .site-header, .sidebar, .overlay, .cookie-notice, .site-footer, .skip-link { display: none !important; }
+  body { background: #fff; color: #000; }
+}
