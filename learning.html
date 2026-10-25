@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Learning Materials | Chou Farm Limited</title>
+  <meta name="description" content="Agricultural learning resources from Chou Farm Limited: manuals, handbooks, templates, presentations and training videos.">
+  <meta name="theme-color" content="#176534">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Learning Materials | Chou Farm Limited">
+  <meta property="og:description" content="Manuals, handbooks, templates and training resources for farmers.">
+  <meta property="og:locale" content="en_KE">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="learning">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div id="site-header"></div>
+  <div id="site-sidebar"></div>
+
+  <main id="main" class="page-main">
+
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a> / Learning Materials
+        </nav>
+        <h1>Learning Materials</h1>
+        <p>Resources for farmers, trainers and students.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="resources-title">
+      <div class="container">
+        <h2 id="resources-title" class="section-title">Browse the resources</h2>
+
+        <!-- Search and filter. They switch on when the resources have loaded. -->
+        <div class="toolbar" role="search">
+          <div class="field">
+            <label for="learning-search">Search resources</label>
+            <input class="input" id="learning-search" type="search" placeholder="Search by title" disabled>
+          </div>
+          <div class="field">
+            <label for="learning-category">Category</label>
+            <select class="input" id="learning-category" disabled>
+              <option value="">All categories</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="learning-type">File type</label>
+            <select class="input" id="learning-type" disabled>
+              <option value="">All file types</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="guide-count" id="learning-count" aria-live="polite"></p>
+
+        <!-- Published learning resources from the database are shown in this grid -->
+        <div id="learning-list" class="grid grid-3" aria-live="polite">
+          <div class="empty-state">
+            <i data-lucide="graduation-cap"></i>
+            <p>No learning materials published yet. Resources added in the dashboard will appear here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="types-title">
+      <div class="container">
+        <h2 id="types-title" class="section-title">What you can expect to find</h2>
+        <div class="grid grid-2">
+          <article class="card">
+            <span class="card-icon"><i data-lucide="file-text"></i></span>
+            <h3>Manuals and handbooks</h3>
+            <p>Training manuals, farmer handbooks, extension materials and research summaries, mostly as PDF or Word documents.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon"><i data-lucide="file-spreadsheet"></i></span>
+            <h3>Templates and worksheets</h3>
+            <p>Farm management templates and downloadable learning sheets.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon"><i data-lucide="presentation"></i></span>
+            <h3>Presentations and course outlines</h3>
+            <p>Slide presentations and outlines for training sessions.</p>
+          </article>
+          <article class="card">
+            <span class="card-icon"><i data-lucide="video"></i></span>
+            <h3>Videos and links</h3>
+            <p>Training videos and links to trusted external resources.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="access-title">
+      <div class="container">
+        <div class="prose">
+          <h2 id="access-title">Viewing and downloading</h2>
+          <p>
+            Each resource shows what you can do with it. PDF documents can be previewed
+            on this page, and some resources can be downloaded.
+          </p>
+          <p class="placeholder-note">
+             learning materials.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/sanitize.js"></script>
+  <script src="js/learning.js"></script>
+</body>
+</html>

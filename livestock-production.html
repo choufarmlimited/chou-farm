@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Livestock Production | Chou Farm Limited</title>
+  <meta name="description" content="The livestock species and breeds raised at Chou Farm Limited, with descriptions and photographs.">
+  <meta name="theme-color" content="#176534">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Livestock Production | Chou Farm Limited">
+  <meta property="og:description" content="The livestock raised at Chou Farm Limited.">
+  <meta property="og:locale" content="en_KE">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="livestock-production">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div id="site-header"></div>
+  <div id="site-sidebar"></div>
+
+  <main id="main" class="page-main">
+
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a> /
+          <a href="production.html">Production</a> / Livestock Production
+        </nav>
+        <h1>Livestock Production</h1>
+        <p>The animals raised on the Chou Farm Limited farm.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="livestock-title">
+      <div class="container">
+        <h2 id="livestock-title" class="section-title">Our livestock</h2>
+
+        <!-- Published livestock from the database are shown in this grid -->
+        <div id="livestock-list" class="grid grid-3" aria-live="polite">
+          <div class="empty-state">
+            <i data-lucide="cow-head"></i>
+            <p>No livestock published yet. Species and breeds added in the dashboard will appear here.</p>
+          </div>
+        </div>
+
+        <p class="section-link">
+          <a href="gallery.html">See livestock photographs in the farm gallery</a>
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="more-title">
+      <div class="container">
+        <h2 id="more-title" class="section-title">Explore more</h2>
+        <div class="grid grid-2">
+          <a class="card card-link" href="crop-production.html">
+            <span class="card-icon"><i data-lucide="wheat"></i></span>
+            <h3>Crop Production</h3>
+            <p>See the crops grown on the farm.</p>
+          </a>
+          <a class="card card-link" href="sales.html">
+            <span class="card-icon"><i data-lucide="shopping-cart"></i></span>
+            <h3>Sales</h3>
+            <p>Browse our products.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/sanitize.js"></script>
+  <script src="js/production.js"></script>
+</body>
+</html>

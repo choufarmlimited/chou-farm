@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Farming Guides | Chou Farm Limited</title>
+  <meta name="description" content="Practical farming guides from Chou Farm Limited on crops, livestock, soil and water, pest and disease control, and farm business.">
+  <meta name="theme-color" content="#176534">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Farming Guides | Chou Farm Limited">
+  <meta property="og:description" content="Practical farming guides for crop and livestock farmers.">
+  <meta property="og:locale" content="en_KE">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="guides">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div id="site-header"></div>
+  <div id="site-sidebar"></div>
+
+  <main id="main" class="page-main">
+
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a> / Farming Guides
+        </nav>
+        <h1>Farming Guides</h1>
+        <p>Practical knowledge for crop and livestock farmers.</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="guides-title">
+      <div class="container">
+        <h2 id="guides-title" class="section-title">Browse the guides</h2>
+
+        <!-- Search and filter. They switch on when the guides have loaded. -->
+        <div class="toolbar" role="search">
+          <div class="field">
+            <label for="guide-search">Search guides</label>
+            <input class="input" id="guide-search" type="search" placeholder="Search by title or topic" disabled>
+          </div>
+          <div class="field">
+            <label for="guide-category">Category</label>
+            <select class="input" id="guide-category" disabled>
+              <option value="">All categories</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="guide-count" id="guide-count" aria-live="polite"></p>
+
+        <!-- Published guides from the database are shown in this grid -->
+        <div id="guide-list" class="grid grid-3" aria-live="polite">
+          <div class="empty-state">
+            <i data-lucide="book-open"></i>
+            <p>No guides published yet. Guides added in the dashboard will appear here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" aria-labelledby="topics-title">
+      <div class="container">
+        <div class="prose">
+          <h2 id="topics-title">Guide topics</h2>
+          <p>Guides are organised under topics such as:</p>
+          <ul>
+            <li>Crop husbandry</li>
+            <li>Livestock management</li>
+            <li>Soil and water</li>
+            <li>Pest and disease control</li>
+            <li>Post-harvest handling</li>
+            <li>Farm business and records</li>
+            <li>Climate-smart farming</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="advice-title">
+      <div class="container">
+        <div class="prose">
+          <h2 id="advice-title">Important advice</h2>
+          <p class="placeholder-note">
+            The guides give general information only. For help with a specific
+            problem on your farm, please consult a qualified agricultural extension
+            officer or a registered veterinarian.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/sanitize.js"></script>
+  <script src="js/guides.js"></script>
+</body>
+</html>

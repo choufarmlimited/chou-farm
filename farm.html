@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Our Farm | Chou Farm Limited</title>
+  <meta name="description" content="The Chou Farm Limited farm: location, climate and soil, water resources, crop and livestock areas, facilities and farming calendar.">
+  <meta name="theme-color" content="#176534">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Our Farm | Chou Farm Limited">
+  <meta property="og:description" content="Farm profile, location, water resources, production areas, facilities and farming calendar.">
+  <meta property="og:locale" content="en_KE">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="farm">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div id="site-header"></div>
+  <div id="site-sidebar"></div>
+
+  <main id="main" class="page-main">
+
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a> / Our Farm
+        </nav>
+        <h1>Our Farm</h1>
+        <p>Where Chou Farm Limited grows crops and raises livestock.</p>
+      </div>
+    </section>
+
+    <!-- Farm profile -->
+    <section class="section" aria-labelledby="profile-title">
+      <div class="container">
+        <div class="prose">
+          <h2 id="profile-title" data-farm-headline>Farm profile</h2>
+          <div data-farm-body="description_html">
+            <p class="placeholder-note">
+              [Placeholder] The farm profile and description will be written by an
+              administrator in the dashboard. No acreage, capacity or certifications
+              are shown until real details are entered.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location -->
+    <section class="section section-alt" aria-labelledby="location-title">
+      <div class="container">
+        <h2 id="location-title" class="section-title">Location</h2>
+        <div class="grid grid-2">
+          <article class="card">
+            <span class="card-icon"><i data-lucide="map-pin"></i></span>
+            <h3>Address and area</h3>
+            <ul class="prose">
+              <li><strong>Physical address:</strong> <span id="loc-address">[To be added]</span></li>
+              <li><strong>County:</strong> <span id="loc-county">[To be added]</span></li>
+              <li><strong>Sub-county:</strong> <span id="loc-subcounty">[To be added]</span></li>
+              <li><strong>Nearest town:</strong> <span id="loc-town">[To be added]</span></li>
+              <li><strong>GPS coordinates:</strong> <span id="loc-gps">[To be added when available]</span></li>
+            </ul>
+          </article>
+          <article class="card">
+            <span class="card-icon"><i data-lucide="map"></i></span>
+            <h3>Map</h3>
+            <div id="map-box">
+              <div class="empty-state">
+                <i data-lucide="map"></i>
+                <p>The map will appear here once an administrator enters the farm location.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Climate, soil and water -->
+    <section class="section" aria-labelledby="environment-title">
+      <div class="container">
+        <h2 id="environment-title" class="section-title">Climate, soil and water</h2>
+        <div class="grid grid-3">
+          <article class="card">
+            <span class="card-icon"><i data-lucide="cloud-sun"></i></span>
+            <h3>Climate</h3>
+            <div data-farm-body="climate_html"><p>[Placeholder] Climate information will be added when known.</p></div>
+          </article>
+          <article class="card">
+            <span class="card-icon"><i data-lucide="mountain"></i></span>
+            <h3>Soil</h3>
+            <div data-farm-body="soil_html"><p>[Placeholder] Soil information will be added when known.</p></div>
+          </article>
+          <article class="card">
+            <span class="card-icon"><i data-lucide="droplets"></i></span>
+            <h3>Irrigation and water resources</h3>
+            <div data-farm-body="irrigation_html"><p>[Placeholder] Water sources and irrigation details will be added by an administrator.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Production areas -->
+    <section class="section section-alt" aria-labelledby="areas-title">
+      <div class="container">
+        <h2 id="areas-title" class="section-title">Production areas and facilities</h2>
+        <div class="grid grid-3">
+          <article class="card">
+            <span class="card-icon"><i data-lucide="wheat"></i></span>
+            <h3>Crop production areas</h3>
+            <div data-farm-body="crop_areas_html"><p>[Placeholder] Crop areas will be described by an administrator.</p></div>
+          </article>
+          <article class="card">
+            <span class="card-icon"><i data-lucide="cow-head"></i></span>
+            <h3>Livestock facilities</h3>
+            <div data-farm-body="livestock_facilities_html"><p>[Placeholder] Livestock facilities will be described by an administrator.</p></div>
+          </article>
+          <article class="card">
+            <span class="card-icon"><i data-lucide="tractor"></i></span>
+            <h3>Machinery and infrastructure</h3>
+            <div data-farm-body="machinery_html"><p>[Placeholder] Equipment and infrastructure will be listed by an administrator.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seasonal calendar and practices -->
+    <section class="section" aria-labelledby="practice-title">
+      <div class="container">
+        <h2 id="practice-title" class="section-title">Seasons and practices</h2>
+        <div class="grid grid-2">
+          <article class="card">
+            <span class="card-icon"><i data-lucide="calendar-days"></i></span>
+            <h3>Seasonal activities and farming calendar</h3>
+            <div data-farm-body="calendar_html"><p>[Placeholder] The farming calendar will be added by an administrator.</p></div>
+          </article>
+          <article class="card">
+            <span class="card-icon"><i data-lucide="leaf"></i></span>
+            <h3>Sustainable farming practices</h3>
+            <div data-farm-body="practices_html"><p>[Placeholder] Practices will be described by an administrator.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Photographs and visiting -->
+    <section class="section section-alt" aria-labelledby="visit-title">
+      <div class="container">
+        <h2 id="visit-title" class="section-title">Farm photographs and visiting</h2>
+        <div class="grid grid-2">
+          <div class="empty-state">
+            <i data-lucide="camera"></i>
+            <p>Farm photographs will appear here once published.</p>
+          </div>
+          <article class="card">
+            <span class="card-icon"><i data-lucide="info"></i></span>
+            <h3>Visiting information</h3>
+            <div data-farm-body="visiting_html"><p>[Placeholder] Visiting arrangements, if any, will be added by an administrator.</p></div>
+            <a class="btn btn-primary" href="contact.html">Ask about a visit</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/sanitize.js"></script>
+  <script src="js/farm.js"></script>
+</body>
+</html>

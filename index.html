@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chou Farm Limited | Fresh Produce. Premium Quality.</title>
+  <meta name="description" content="Chou Farm Limited: crop production, livestock production, agricultural products and farmer education. Fresh Produce. Premium Quality.">
+  <meta name="theme-color" content="#176534">
+
+  <!-- Social sharing -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chou Farm Limited | Fresh Produce. Premium Quality.">
+  <meta property="og:description" content="Crop production, livestock production, agricultural products and farmer education.">
+  <meta property="og:locale" content="en_KE">
+
+  <!-- Fonts (display swap keeps text visible while fonts load) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Our styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- Header, sidebar and footer are inserted here by js/layout.js -->
+  <div id="site-header"></div>
+  <div id="site-sidebar"></div>
+
+  <main id="main" class="page-main">
+
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-inner">
+        <p class="eyebrow">Chou Farm Limited</p>
+        <h1 id="hero-title">Fresh Produce. Premium Quality.</h1>
+        <p class="hero-text">
+          Crop production, livestock production, farm products and practical
+          farming knowledge, all from one trusted agricultural business.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="farm.html">Explore the farm</a>
+          <a class="btn btn-light" href="sales.html">View products</a>
+          <a class="btn btn-outline-light" href="contact.html">Contact us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="section" aria-labelledby="intro-title">
+      <div class="container narrow">
+        <h2 id="intro-title" class="section-title">Welcome to Chou Farm Limited</h2>
+        <p class="lead" id="home-intro">
+          [Placeholder] The company introduction will be written by an
+          administrator in the dashboard once the final text is ready.
+        </p>
+        <p id="home-intro-more" hidden><a href="about.html">Read more about us</a></p>
+      </div>
+    </section>
+
+    <!-- Mission and vision -->
+    <section class="section section-alt" aria-labelledby="mv-title">
+      <div class="container">
+        <h2 id="mv-title" class="section-title">Mission and vision</h2>
+        <div class="grid grid-2">
+          <article class="card" data-home-section="mission">
+            <span class="card-icon"><i data-lucide="target"></i></span>
+            <h3 data-home-title>Our mission</h3>
+            <p data-home-text>[Placeholder] Mission statement to be entered by an administrator.</p>
+            <a href="about.html" data-home-more hidden>Read more</a>
+          </article>
+          <article class="card" data-home-section="vision">
+            <span class="card-icon"><i data-lucide="eye"></i></span>
+            <h3 data-home-title>Our vision</h3>
+            <p data-home-text>[Placeholder] Vision statement to be entered by an administrator.</p>
+            <a href="about.html" data-home-more hidden>Read more</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured crops and livestock -->
+    <section class="section" aria-labelledby="featured-title">
+      <div class="container">
+        <h2 id="featured-title" class="section-title">Featured crops and livestock</h2>
+
+        <!-- Featured records appear here when an administrator marks them as featured -->
+        <div class="grid grid-3" id="featured-items" hidden style="margin-bottom: 16px;"></div>
+
+        <div class="grid grid-2">
+          <a class="card card-link" href="crop-production.html">
+            <span class="card-icon"><i data-lucide="wheat"></i></span>
+            <h3>Crop production</h3>
+            <p>See all the crops grown on the farm.</p>
+          </a>
+          <a class="card card-link" href="livestock-production.html">
+            <span class="card-icon"><i data-lucide="cow-head"></i></span>
+            <h3>Livestock production</h3>
+            <p>See the animals raised on the farm.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured products -->
+    <section class="section section-alt" aria-labelledby="products-title">
+      <div class="container">
+        <h2 id="products-title" class="section-title">Featured products</h2>
+        <div class="grid grid-2" id="featured-products" aria-live="polite">
+          <div class="empty-state">
+            <i data-lucide="shopping-cart"></i>
+            <p>No featured products yet. Products marked as featured in the dashboard will appear here.</p>
+          </div>
+        </div>
+        <p class="section-link"><a href="sales.html">View all products</a></p>
+      </div>
+    </section>
+
+    <!-- Latest farm photographs -->
+    <section class="section" aria-labelledby="photos-title">
+      <div class="container">
+        <h2 id="photos-title" class="section-title">Latest farm photographs</h2>
+        <div class="gallery-thumbs" id="latest-photos" aria-live="polite">
+          <div class="empty-state" style="grid-column: 1 / -1;">
+            <i data-lucide="images"></i>
+            <p>No photographs published yet.</p>
+          </div>
+        </div>
+        <p class="section-link"><a href="gallery.html">Open the farm gallery</a></p>
+      </div>
+    </section>
+
+    <!-- Farming guides and learning -->
+    <section class="section section-alt" aria-labelledby="learn-title">
+      <div class="container">
+        <h2 id="learn-title" class="section-title">Learn with us</h2>
+        <div class="grid grid-2">
+          <a class="card card-link" href="guides.html">
+            <span class="card-icon"><i data-lucide="book-open"></i></span>
+            <h3>Farming guides</h3>
+            <p>Practical articles for crop and livestock farmers.</p>
+          </a>
+          <a class="card card-link" href="learning.html">
+            <span class="card-icon"><i data-lucide="graduation-cap"></i></span>
+            <h3>Learning materials</h3>
+            <p>Manuals, templates and training resources.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest news -->
+    <section class="section" aria-labelledby="news-title">
+      <div class="container">
+        <h2 id="news-title" class="section-title">Latest news</h2>
+        <div class="grid grid-3" id="news-latest" aria-live="polite">
+          <div class="empty-state">
+            <i data-lucide="newspaper"></i>
+            <p>No news published yet.</p>
+          </div>
+        </div>
+        <p class="section-link"><a href="news.html">View all news</a></p>
+      </div>
+    </section>
+
+    <!-- Farm statistics: stays hidden until an administrator publishes real figures -->
+    <section class="section section-alt" id="stats-section" aria-labelledby="stats-title" hidden>
+      <div class="container">
+        <h2 id="stats-title" class="section-title">Farm at a glance</h2>
+        <div class="grid grid-4" id="stats-grid"></div>
+      </div>
+    </section>
+
+    <!-- Call to action -->
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="container narrow center">
+        <h2 id="cta-title">Talk to Chou Farm Limited</h2>
+        <p>Ask about our products, visit the farm or request farmer training.</p>
+        <a class="btn btn-light" href="contact.html">Contact us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <!-- Lucide icons (pinned version) -->
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Database-driven sections -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/sanitize.js"></script>
+  <script src="js/home.js"></script>
+  <script src="js/news.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

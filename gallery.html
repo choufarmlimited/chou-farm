@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Farm Gallery | Chou Farm Limited</title>
+  <meta name="description" content="Photographs from Chou Farm Limited: the crop production gallery and the livestock production gallery.">
+  <meta name="theme-color" content="#176534">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Farm Gallery | Chou Farm Limited">
+  <meta property="og:description" content="Crop and livestock photographs from Chou Farm Limited.">
+  <meta property="og:locale" content="en_KE">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="gallery">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div id="site-header"></div>
+  <div id="site-sidebar"></div>
+
+  <main id="main" class="page-main">
+
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a> / Farm Gallery
+        </nav>
+        <h1>Farm Gallery</h1>
+        <p>Photographs from the farm. Choose a gallery to view.</p>
+      </div>
+    </section>
+
+    <!-- The two options -->
+    <section class="section" aria-labelledby="choose-title">
+      <div class="container">
+        <h2 id="choose-title" class="visually-hidden">Choose a gallery</h2>
+        <div class="grid grid-2">
+
+          <a class="card card-link choice-card" href="#crop-gallery">
+            <span class="card-icon"><i data-lucide="wheat"></i></span>
+            <h2>Crop Production gallery</h2>
+            <p>Photographs of the crops grown on the farm.</p>
+            <span class="btn btn-primary">View crop photographs</span>
+          </a>
+
+          <a class="card card-link choice-card" href="#livestock-gallery">
+            <span class="card-icon"><i data-lucide="cow-head"></i></span>
+            <h2>Livestock Production gallery</h2>
+            <p>Photographs of the animals raised on the farm.</p>
+            <span class="btn btn-primary">View livestock photographs</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Crop gallery -->
+    <section class="section section-alt" id="crop-gallery" style="scroll-margin-top: 80px;" aria-labelledby="crop-gallery-title">
+      <div class="container">
+        <h2 id="crop-gallery-title" class="section-title">Crop Production gallery</h2>
+
+        <!-- Published gallery items (title, description, photographs) are shown here -->
+        <div id="crop-gallery-grid" class="grid grid-3" aria-live="polite">
+          <div class="empty-state">
+            <i data-lucide="images"></i>
+            <p>No crop photographs published yet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Livestock gallery -->
+    <section class="section" id="livestock-gallery" style="scroll-margin-top: 80px;" aria-labelledby="livestock-gallery-title">
+      <div class="container">
+        <h2 id="livestock-gallery-title" class="section-title">Livestock Production gallery</h2>
+
+        <!-- Published gallery items (title, description, photographs) are shown here -->
+        <div id="livestock-gallery-grid" class="grid grid-3" aria-live="polite">
+          <div class="empty-state">
+            <i data-lucide="images"></i>
+            <p>No livestock photographs published yet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/sanitize.js"></script>
+  <script src="js/gallery.js"></script>
+</body>
+</html>

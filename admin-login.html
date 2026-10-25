@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Administrator Sign In | Chou Farm Limited</title>
+  <meta name="description" content="Administrator sign in for Chou Farm Limited.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#176534">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body data-page="admin-login">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div id="site-header"></div>
+  <div id="site-sidebar"></div>
+
+  <main id="main" class="page-main">
+    <section class="section">
+      <div class="container">
+        <div class="auth-wrap">
+
+          <article class="card auth-card">
+            <h1 id="auth-heading">Administrator sign in</h1>
+            <p class="muted" id="auth-intro">For authorised staff only.</p>
+
+            <p id="login-message" class="form-message" role="alert" aria-live="assertive" hidden></p>
+
+            <!-- Sign in -->
+            <form id="login-form" class="stack" novalidate>
+              <div class="field">
+                <label for="login-email">Email address</label>
+                <input class="input" id="login-email" name="email" type="email"
+                       autocomplete="username" required maxlength="150">
+              </div>
+
+              <div class="field">
+                <label for="login-password">Password</label>
+                <div class="password-row">
+                  <input class="input" id="login-password" name="password" type="password"
+                         autocomplete="current-password" required maxlength="200">
+                  <button class="btn btn-secondary" id="toggle-password" type="button"
+                          aria-pressed="false" aria-controls="login-password">Show</button>
+                </div>
+              </div>
+
+              <button class="btn btn-primary btn-block" id="login-submit" type="submit">Sign in</button>
+              <button class="link-button" id="forgot-link" type="button">Forgot your password?</button>
+            </form>
+
+            <!-- Ask for a reset link -->
+            <form id="reset-form" class="stack" novalidate hidden>
+              <div class="field">
+                <label for="reset-email">Email address</label>
+                <input class="input" id="reset-email" name="email" type="email"
+                       autocomplete="username" required maxlength="150">
+              </div>
+              <button class="btn btn-primary btn-block" id="reset-submit" type="submit">Send reset link</button>
+              <button class="link-button" id="reset-back" type="button">Back to sign in</button>
+            </form>
+
+            <!-- Choose a new password -->
+            <form id="new-password-form" class="stack" novalidate hidden>
+              <div class="field">
+                <label for="np-password">New password</label>
+                <input class="input" id="np-password" name="password" type="password"
+                       autocomplete="new-password" required maxlength="200">
+                <p class="field-hint">At least 12 characters.</p>
+              </div>
+              <div class="field">
+                <label for="np-confirm">Confirm new password</label>
+                <input class="input" id="np-confirm" name="confirm" type="password"
+                       autocomplete="new-password" required maxlength="200">
+              </div>
+              <button class="btn btn-primary btn-block" id="np-submit" type="submit">Save new password</button>
+            </form>
+          </article>
+
+          <p class="center"><a href="index.html">Back to the website</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

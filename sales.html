@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-KE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sales | Chou Farm Limited</title>
+  <meta name="description" content="Browse the products of Chou Farm Limited.">
+  <meta name="theme-color" content="#176534">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sales | Chou Farm Limited">
+  <meta property="og:description" content="Farm products from Chou Farm Limited. Fresh Produce. Premium Quality.">
+  <meta property="og:locale" content="en_KE">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="sales">
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <div id="site-header"></div>
+  <div id="site-sidebar"></div>
+
+  <main id="main" class="page-main">
+
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Home</a> / Sales
+        </nav>
+        <h1>Sales</h1>
+        <p>Farm products from Chou Farm Limited. Prices are in Kenyan Shillings (KES).</p>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="catalogue-title">
+      <div class="container">
+        <h2 id="catalogue-title" class="section-title">Product catalogue</h2>
+
+        <!-- Search, filter and sort. They switch on when the products have loaded. -->
+        <div class="toolbar" role="search">
+          <div class="field">
+            <label for="product-search">Search by name</label>
+            <input class="input" id="product-search" type="search" placeholder="Search products" disabled>
+          </div>
+          <div class="field">
+            <label for="product-category">Category</label>
+            <select class="input" id="product-category" disabled>
+              <option value="">All categories</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="product-sort">Sort by</label>
+            <select class="input" id="product-sort" disabled>
+              <option value="name">Name (A to Z)</option>
+              <option value="price-asc">Price (low to high)</option>
+              <option value="price-desc">Price (high to low)</option>
+              <option value="availability">Availability</option>
+            </select>
+          </div>
+        </div>
+
+        <p class="guide-count" id="product-count" aria-live="polite"></p>
+
+        <!-- Published products from the database are shown in this grid -->
+        <div id="product-list" class="grid grid-3" aria-live="polite">
+          <div class="empty-state">
+            <i data-lucide="shopping-cart"></i>
+            <p>No products published yet. Products added in the dashboard will appear here.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="container narrow center">
+        <h2 id="cta-title">Looking for something specific?</h2>
+        <p>Tell us what you need and we will get back to you.</p>
+        <a class="btn btn-light" href="contact.html">Contact us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js"></script>
+  <script src="js/icons.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3.1.6/dist/purify.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/sanitize.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>
