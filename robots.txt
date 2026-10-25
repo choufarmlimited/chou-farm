@@ -1,0 +1,16 @@
+# Chou Farm Limited - robots.txt
+# Asks search engines to keep away from private and temporary pages.
+# This is a request, not security. Real protection is the sign-in and the database rules.
+
+User-agent: *
+Disallow: /admin.html
+Disallow: /admin
+Disallow: /admin-login.html
+Disallow: /admin-login
+Disallow: /test-connection.html
+Disallow: /test-security.html
+Disallow: /test-editor.html
+Disallow: /test-submit.html
+
+# Website address: https://choufarmlimited.github.io/chou-farm/
+Sitemap: https://choufarmlimited.github.io/chou-farm/sitemap.xml
