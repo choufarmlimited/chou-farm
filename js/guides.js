@@ -24,15 +24,6 @@
     return value !== null && value !== undefined && String(value).trim() !== "";
   }
 
-  function formatDate(value) {
-    if (!value) { return ""; }
-    var date = new Date(value);
-    if (isNaN(date.getTime())) { return ""; }
-    return new Intl.DateTimeFormat("en-KE", {
-      timeZone: "Africa/Nairobi", day: "numeric", month: "long", year: "numeric"
-    }).format(date);
-  }
-
   function coverUrl(path) {
     if (!hasText(path) || !/^[A-Za-z0-9\/_.\-]+$/.test(path) || path.indexOf("..") !== -1) { return ""; }
     return sb.storage.from("guides").getPublicUrl(path).data.publicUrl;
@@ -122,8 +113,6 @@
 
         card.appendChild(el("h3", "", guide.title));
 
-        var date = formatDate(guide.published_at);
-        if (date) { card.appendChild(el("p", "item-meta", date)); }
         if (hasText(guide.summary)) { card.appendChild(el("p", "", guide.summary)); }
 
         var link = el("a", "", "Read the guide");
@@ -210,7 +199,7 @@
           if (description && hasText(guide.summary)) { description.setAttribute("content", guide.summary); }
 
           if (meta) {
-            meta.textContent = [category && category.name, formatDate(guide.published_at)]
+            meta.textContent = [category && category.name]
               .filter(function (part) { return hasText(part); }).join(" | ");
           }
 
